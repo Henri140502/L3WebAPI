@@ -36,4 +36,8 @@ public class GameDataAccess : IGameDataAccess
     public async Task<IEnumerable<GameDAO>> GetAllGames() {
         return games;
     }
+    
+    public async Task<GameDAO?> GetGameById(Guid appId) {
+        return games.FirstOrDefault(g => g.AppId == appId);
+    }
 }

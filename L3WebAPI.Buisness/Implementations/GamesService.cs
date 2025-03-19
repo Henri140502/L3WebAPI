@@ -28,4 +28,18 @@ public class GamesService : IGamesService
             return [];
         }
     }
+
+    public async Task<GameDTO?> GetGameById(Guid appId)
+    {
+        try
+        {
+            var game = await _gameDataAccess.GetGameById(appId);
+            return game?.ToDTO();
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, "Error getting game by ID", appId);
+            return null;
+        }
+    }
 }
