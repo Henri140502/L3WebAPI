@@ -38,5 +38,9 @@ namespace L3WebAPI.DataAccess.Implementations {
 		public async Task<GameDAO?> GetGameById(Guid id) {
 			return games.FirstOrDefault(x => x.AppId == id);
 		}
+
+		public async Task CreateGame(GameDAO game) {
+			games.Add(game);
+		}
 	}
 }

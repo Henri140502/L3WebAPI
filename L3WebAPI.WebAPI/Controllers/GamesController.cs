@@ -1,5 +1,7 @@
-﻿using L3WebApi.Business.Interfaces;
+﻿using L3WebApi.Business.Exceptions;
+using L3WebApi.Business.Interfaces;
 using L3WebAPI.Common.Dto;
+using L3WebAPI.Common.Request;
 using Microsoft.AspNetCore.Mvc;
 
 namespace L3WebAPI.WebAPI.Controllers {
@@ -28,6 +30,18 @@ namespace L3WebAPI.WebAPI.Controllers {
 			}
 
 			return Ok(game);
+		}
+
+		[HttpPost]
+		[ProducesResponseType(StatusCodes.Status200OK)]
+		[ProducesResponseType(StatusCodes.Status400BadRequest)]
+		public async Task<ActionResult> CreateGame([FromBody] CreateGameRequest request) {
+			try {
+				await _gamesService.CreateGame(request);
+				return Ok();
+			} catch (BusinessRuleException e) {
+				return BadRequest(e.Message);
+			}
 		}
 	}
 }
