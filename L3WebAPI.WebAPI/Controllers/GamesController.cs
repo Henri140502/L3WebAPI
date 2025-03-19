@@ -15,4 +15,16 @@ namespace L3WebAPI.WebAPI.Controllers;
         public async Task<ActionResult<IEnumerable<GameDTO>>> GetAllGames() { 
             return Ok(await _gameService.GetAllGames());
         }
+
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<GameDTO>> GetGameById(Guid id)
+        {
+            var game = await _gameService.GetGameById(id);
+            if (game == null) {
+                return NotFound();
+            }
+            return Ok(game);
+        }
     }
