@@ -6,26 +6,34 @@ namespace L3WebAPI.DataAcces.Implementaions;
 
 public class GameDataAccess : IGameDataAccess
 {
-    private static List<GameDAO> games = [
-        new GameDAO {
+    private static List<GameDAO> games =
+    [
+        new GameDAO
+        {
             AppId = Guid.NewGuid(),
             Name = "Portal 2",
-            Prices = [
-                new PriceDAO {
+            Prices =
+            [
+                new PriceDAO
+                {
                     valeur = 19.99M,
                     currency = Currency.USD,
                 }
             ]
         },
-        new GameDAO {
+        new GameDAO
+        {
             AppId = Guid.NewGuid(),
             Name = "Half-Life 2",
-            Prices = [
-                new PriceDAO {
+            Prices =
+            [
+                new PriceDAO
+                {
                     valeur = 14.99M,
                     currency = Currency.EUR,
                 },
-                new PriceDAO {
+                new PriceDAO
+                {
                     valeur = 15.99M,
                     currency = Currency.USD,
                 }
@@ -33,11 +41,17 @@ public class GameDataAccess : IGameDataAccess
         }
     ];
 
-    public async Task<IEnumerable<GameDAO>> GetAllGames() {
+    public async Task<IEnumerable<GameDAO>> GetAllGames()
+    {
         return games;
     }
-    
-    public async Task<GameDAO?> GetGameById(Guid appId) {
+
+    public async Task<GameDAO?> GetGameById(Guid appId)
+    {
         return games.FirstOrDefault(g => g.AppId == appId);
+    }
+
+    public async Task CreateGame(GameDAO game) {
+        games.Add(game);
     }
 }
