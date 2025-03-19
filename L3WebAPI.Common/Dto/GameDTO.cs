@@ -1,3 +1,5 @@
+using L3WebAPI.Common.Dao;
+
 namespace L3WebAPI.Common.Dto;
 
 public class GameDTO
@@ -6,4 +8,16 @@ public class GameDTO
     public string Name { get; set; } = null!;
     public IEnumerable<PriceDTO> Prices { get; set; } = null!;
     public Uri LogoUri { get; set; } = null!;
+}
+
+public static class GameDTOExtensions
+{
+    public static GameDTO ToDTO(this GameDAO gameDAO)
+    {
+        return new GameDTO
+        {
+            AppId = gameDAO.AppId,
+            Name = gameDAO.Name,
+        };
+    }
 }
