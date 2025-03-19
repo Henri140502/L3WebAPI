@@ -1,3 +1,4 @@
+using L3WebAPI.Buisness.Interfaces;
 using L3WebAPI.Common.Dto;
 using Microsoft.AspNetCore.Mvc;
 
@@ -5,8 +6,8 @@ namespace L3WebAPI.WebAPI.Controllers;
     [Microsoft.AspNetCore.Components.Route("api/[controller]")]
     [ApiController]
     public class GamesController : ControllerBase {
-        private readonly IGameService _gameService; 
-        public GamesController(IGameService gameService) {
+        private readonly IGamesService _gameService; 
+        public GamesController(IGamesService gameService) {
             _gameService = gameService;
         }
         [HttpGet("")] 
