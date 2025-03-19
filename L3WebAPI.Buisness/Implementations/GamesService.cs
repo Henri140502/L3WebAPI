@@ -20,7 +20,7 @@ public class GamesService : IGamesService
         try
         {
             var games = await _gameDataAccess.GetAllGames();
-            
+            return games.Select(g => g.ToDTO());
         }
         catch (Exception e)
         {

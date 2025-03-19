@@ -18,6 +18,7 @@ public static class GameDTOExtensions
         {
             AppId = gameDAO.AppId,
             Name = gameDAO.Name,
+            Prices = gameDAO.Prices.Select(price => price.ToDTO()),
         };
     }
 }
