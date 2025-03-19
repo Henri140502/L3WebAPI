@@ -1,11 +1,14 @@
 using L3WebAPI.Buisness.Implementations;
 using L3WebAPI.Buisness.Interfaces;
+using L3WebAPI.DataAcces.Implementaions;
+using L3WebAPI.DataAcces.Interfaces;
 using Swashbuckle.AspNetCore.SwaggerUI;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddTransient<IGamesService, GamesService>();
+builder.Services.AddTransient<IGameDataAccess, GameDataAccess>();
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
