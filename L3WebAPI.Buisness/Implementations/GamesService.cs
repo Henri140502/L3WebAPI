@@ -25,7 +25,7 @@ public class GamesService : IGamesService
         catch (Exception e)
         {
             _logger.LogError(e, "Error getting all games");
-            throw;
+            return [];
         }
     }
 }
