@@ -54,4 +54,9 @@ public class GameDataAccess : IGameDataAccess
     public async Task CreateGame(GameDAO game) {
         games.Add(game);
     }
+
+    public async Task<IEnumerable<GameDAO>?> GetSearchName(string name)
+    {
+        return games.Where(g => g.Name.Contains(name, StringComparison.OrdinalIgnoreCase)).ToList();
+    }
 }

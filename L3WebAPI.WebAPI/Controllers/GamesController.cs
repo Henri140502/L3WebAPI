@@ -54,4 +54,17 @@ public class GamesController : ControllerBase
             return BadRequest(e.Message);
         }
     }
+
+    [HttpGet("{Name}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<ActionResult<IEnumerable<GameDTO>>> GetSearchName(string name)
+    {
+        var games = await _gameService.GetSearchName(name);
+        if (games is null)
+        {
+            return NotFound();
+        }
+        return Ok(games);
+    }
 }

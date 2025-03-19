@@ -80,4 +80,18 @@ public class GamesService : IGamesService
             throw;
         }
     }
+
+    public async Task<IEnumerable<GameDTO>?> GetSearchName(string name)
+    {
+        try
+        {
+            var games = await _gameDataAccess.GetSearchName(name);
+            return games?.Select(g => g.ToDTO());
+        }
+        catch (Exception e)
+        {
+            _logger.LogError(e, "Error searching for games by name", name);
+            return  [];
+        }
+    }
 }
