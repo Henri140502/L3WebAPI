@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using L3WebAPI.Buisness.Implementations;
 using L3WebAPI.Buisness.Interfaces;
 using L3WebAPI.DataAcces.Implementaions;
@@ -9,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddTransient<IGamesService, GamesService>();
 builder.Services.AddTransient<IGameDataAccess, GameDataAccess>();
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options => {options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()); });
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
