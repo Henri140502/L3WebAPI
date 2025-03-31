@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L3WebAPI.WebAPI", "L3WebAPI.WebAPI\L3WebAPI.WebAPI.csproj", "{AD48E583-F3AF-410D-B763-B615545C9784}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L3WebAPI.DataAccess", "L3WebAPI.DataAccess\L3WebAPI.DataAccess.csproj", "{17157C02-7CB4-4D05-A020-C267388136B5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L3WebAPI.Common", "L3WebAPI.Common\L3WebAPI.Common.csproj", "{61AD9BE6-B2D6-44AC-8322-963D7E86FB44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L3WebAPI.WebAPI.Tests", "L3WebAPI.WebAPI.Tests\L3WebAPI.WebAPI.Tests.csproj", "{4665CC41-ED8C-45BA-87E4-82F9E8430F74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{61AD9BE6-B2D6-44AC-8322-963D7E86FB44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61AD9BE6-B2D6-44AC-8322-963D7E86FB44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61AD9BE6-B2D6-44AC-8322-963D7E86FB44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4665CC41-ED8C-45BA-87E4-82F9E8430F74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4665CC41-ED8C-45BA-87E4-82F9E8430F74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4665CC41-ED8C-45BA-87E4-82F9E8430F74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4665CC41-ED8C-45BA-87E4-82F9E8430F74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

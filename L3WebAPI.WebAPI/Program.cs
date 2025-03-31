@@ -5,35 +5,41 @@ using L3WebAPI.DataAccess.Interfaces;
 using Swashbuckle.AspNetCore.SwaggerUI;
 using System.Text.Json.Serialization;
 
-var builder = WebApplication.CreateBuilder(args);
+public class Program {
 
-// Add services to the container.
-builder.Services.AddTransient<IGamesDataAccess, GamesDataAccess>();
-builder.Services.AddTransient<IGamesService, GamesService>();
+	public static void Main(string[] args) {
+		var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers().AddJsonOptions(options => {
-	options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
-});
-builder.Services.AddOpenApi();
+		// Add services to the container.
+		builder.Services.AddTransient<IGamesDataAccess, GamesDataAccess>();
+		builder.Services.AddTransient<IGamesService, GamesService>();
 
-var app = builder.Build();
+		builder.Services.AddControllers().AddJsonOptions(options => {
+			options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+		});
+		builder.Services.AddOpenApi();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment()) {
-	app.MapOpenApi();
-}
+		var app = builder.Build();
 
-app.UseHttpsRedirection();
+		// Configure the HTTP request pipeline.
+		if (app.Environment.IsDevelopment()) {
+			app.MapOpenApi();
+		}
 
-app.UseAuthorization();
+		app.UseHttpsRedirection();
 
-app.MapControllers();
+		app.UseAuthorization();
 
-app.UseSwaggerUI(options => {
-	options.ConfigObject.Urls = [new UrlDescriptor {
+		app.MapControllers();
+
+		app.UseSwaggerUI(options => {
+			options.ConfigObject.Urls = [new UrlDescriptor {
 		Name = "L3 Web API",
 		Url = "/openapi/v1.json"
 	}];
-});
+		});
 
-app.Run();
+		app.Run();
+
+	}
+}
