@@ -5,6 +5,7 @@ using L3WebAPI.Common.Dto;
 using L3WebAPI.Common.Request;
 using L3WebAPI.DataAccess.Interfaces;
 using Microsoft.Extensions.Logging;
+using System.Diagnostics;
 
 namespace L3WebApi.Business.Implementations {
 	public class GamesService : IGamesService {
@@ -42,13 +43,7 @@ namespace L3WebApi.Business.Implementations {
 
 		public async Task CreateGame(CreateGameRequest game) {
 			try {
-				if (string.IsNullOrWhiteSpace(game.Name)) {
-					throw new BusinessRuleException("Le nom doit être defini !");
-				}
-
-				if (game.Name.Length > 1000) {
-					throw new BusinessRuleException("Le nom doit faire moins de 1000 caracteres !");
-				}
+				CheckNameBusinessRules(game.Name);
 
 				if (game.Prices.Count() < 1) {
 					throw new BusinessRuleException("Le jeu doit avoir au moins un prix !");
@@ -68,6 +63,16 @@ namespace L3WebApi.Business.Implementations {
 			}
 		}
 
+		private static void CheckNameBusinessRules(string name) {
+			if (string.IsNullOrWhiteSpace(name)) {
+				throw new BusinessRuleException("Le nom doit être defini !");
+			}
+
+			if (name.Length > 1000) {
+				throw new BusinessRuleException("Le nom doit faire moins de 1000 caracteres !");
+			}
+		}
+
 		public async Task<IEnumerable<GameDTO>> SearchByName(string name) {
 			try {
 				return (await _gameDataAccess.SearchByName(name))
@@ -75,6 +80,37 @@ namespace L3WebApi.Business.Implementations {
 			} catch (Exception ex) {
 				_logger.LogError(ex, "Erreur lors de la recherche");
 				return [];
+			}
+		}
+
+		public async Task UpdateGame(Guid id, UpdateGameRequest game) {
+			try {
+				CheckNameBusinessRules(game.Name);
+
+				if (game.Prices.Count() < 1) {
+					throw new BusinessRuleException("Le jeu doit avoir au moins un prix !");
+				}
+
+				await _gameDataAccess.UpdateGame(new GameDAO {
+					AppId = id,
+					Name = game.Name,
+					Prices = game.Prices.Select(price => new PriceDAO {
+						Currency = price.Currency,
+						Valeur = price.Valeur,
+					})
+				});
+
+				/*var dbGame = await _gameDataAccess.GetGameById(id);
+				dbGame.Name = game.Name;
+				dbGame.Prices = game.Prices.Select(price => new PriceDAO {
+					Currency = price.Currency,
+					Valeur = price.Valeur,
+				});
+
+				await _gameDataAccess.UpdateGame(dbGame);*/
+			} catch (Exception ex) {
+				_logger.LogError(ex, "Erreur lors de la creation du jeu");
+				throw;
 			}
 		}
 	}

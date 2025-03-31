@@ -7,5 +7,6 @@ namespace L3WebApi.Business.Interfaces {
 		Task<GameDTO?> GetGameById(Guid id);
 		Task CreateGame(CreateGameRequest game);
 		Task<IEnumerable<GameDTO>> SearchByName(string name);
+		Task UpdateGame(Guid id, UpdateGameRequest game);
 	}
 }

@@ -49,5 +49,13 @@ namespace L3WebAPI.DataAccess.Implementations {
 				StringComparison.OrdinalIgnoreCase
 			));
 		}
+
+		public async Task UpdateGame(GameDAO game) {
+			var gameById = await GetGameById(game.AppId);
+			if (gameById != null) {
+				games.Remove(gameById);
+			}
+			games.Add(game);
+		}
 	}
 }
