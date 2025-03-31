@@ -57,5 +57,9 @@ namespace L3WebAPI.DataAccess.Implementations {
 			}
 			games.Add(game);
 		}
+
+		public async Task DeleteGame(Guid id) {
+			games.Remove(await GetGameById(id));
+		}
 	}
 }

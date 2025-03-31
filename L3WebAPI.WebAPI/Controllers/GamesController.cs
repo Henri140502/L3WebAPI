@@ -61,5 +61,13 @@ namespace L3WebAPI.WebAPI.Controllers {
 				return BadRequest(e.Message);
 			}
 		}
+
+		[HttpDelete("{id}")]
+		[ProducesResponseType(StatusCodes.Status204NoContent)]
+		public async Task<ActionResult> DeleteGame(Guid id) {
+			await _gamesService.DeleteGame(id);
+			return NoContent();
+		}
+
 	}
 }

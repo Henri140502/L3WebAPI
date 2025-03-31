@@ -113,5 +113,13 @@ namespace L3WebApi.Business.Implementations {
 				throw;
 			}
 		}
+
+		public async Task DeleteGame(Guid id) {
+			try {
+				await _gameDataAccess.DeleteGame(id);
+			} catch (Exception ex) {
+				_logger.LogError(ex, "Erreur lors de la suppression du jeu {id}", id);
+			}
+		}
 	}
 }
