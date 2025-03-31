@@ -5,5 +5,6 @@ namespace L3WebAPI.DataAccess.Interfaces {
 		Task<IEnumerable<GameDAO>> GetAllGames();
 		Task<GameDAO?> GetGameById(Guid id);
 		Task CreateGame(GameDAO game);
+		Task<IEnumerable<GameDAO>> SearchByName(string name);
 	}
 }

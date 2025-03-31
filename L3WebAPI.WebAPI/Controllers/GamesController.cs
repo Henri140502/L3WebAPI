@@ -43,5 +43,12 @@ namespace L3WebAPI.WebAPI.Controllers {
 				return BadRequest(e.Message);
 			}
 		}
+
+		[HttpGet("search/{term}")]
+		[ProducesResponseType(StatusCodes.Status200OK)]
+		public async Task<ActionResult<IEnumerable<GameDTO>>> SearchByName(string term) {
+			return Ok(await _gamesService.SearchByName(term));
+		}
+
 	}
 }

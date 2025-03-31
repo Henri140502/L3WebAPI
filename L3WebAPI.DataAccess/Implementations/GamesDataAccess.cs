@@ -42,5 +42,12 @@ namespace L3WebAPI.DataAccess.Implementations {
 		public async Task CreateGame(GameDAO game) {
 			games.Add(game);
 		}
+
+		public async Task<IEnumerable<GameDAO>> SearchByName(string name) {
+			return games.Where(x => x.Name.Contains(
+				name,
+				StringComparison.OrdinalIgnoreCase
+			));
+		}
 	}
 }
