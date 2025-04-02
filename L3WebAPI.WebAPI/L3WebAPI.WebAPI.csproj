@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
+    <PackageReference Include="NLog" Version="5.4.0" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.4.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="7.3.2" />
   </ItemGroup>
 
@@ -15,6 +17,14 @@
     <ProjectReference Include="..\L3WebApi.Business\L3WebApi.Business.csproj" />
     <ProjectReference Include="..\L3WebAPI.Common\L3WebAPI.Common.csproj" />
     <ProjectReference Include="..\L3WebAPI.DataAccess\L3WebAPI.DataAccess.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\.editorconfig" />
   </ItemGroup>
 
 </Project>
