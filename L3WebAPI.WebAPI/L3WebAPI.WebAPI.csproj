@@ -23,8 +23,4 @@
     <EditorConfigFiles Remove="C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\.editorconfig" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\.editorconfig" />
-  </ItemGroup>
-
 </Project>
