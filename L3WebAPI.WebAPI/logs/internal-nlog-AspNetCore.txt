@@ -5,3 +5,144 @@
 2025-04-02 13:34:23.2517 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
 2025-04-02 13:34:23.2618 Info Configuration initialized.
 2025-04-02 13:34:23.5752 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:08:43.8751 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-04-02 16:08:43.8880 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2025-04-02 16:08:43.8880 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2025-04-02 16:08:43.8880 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 16:08:43.9189 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:08:43.9189 Info Configuration initialized.
+2025-04-02 16:08:44.3062 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:10:42.9369 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-04-02 16:10:42.9369 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2025-04-02 16:10:42.9369 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2025-04-02 16:10:42.9369 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 16:10:42.9535 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:10:42.9535 Info Configuration initialized.
+2025-04-02 16:10:43.0491 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:10:43.0627 Info Shutdown() called. Logger closing...
+2025-04-02 16:10:43.0627 Info Closing old configuration.
+2025-04-02 16:10:43.0764 Info Logger has been closed down.
+2025-04-02 16:12:01.1925 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-04-02 16:12:01.1925 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2025-04-02 16:12:01.1925 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2025-04-02 16:12:01.2017 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 16:12:01.2017 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:12:01.2182 Info Configuration initialized.
+2025-04-02 16:12:01.3051 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:12:01.3254 Info Shutdown() called. Logger closing...
+2025-04-02 16:12:01.3254 Info Closing old configuration.
+2025-04-02 16:12:01.3254 Info Logger has been closed down.
+2025-04-02 16:12:56.0890 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-04-02 16:12:56.0948 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2025-04-02 16:12:56.0948 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2025-04-02 16:12:56.0948 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 16:12:56.0948 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:12:56.1125 Info Configuration initialized.
+2025-04-02 16:12:56.1963 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:12:56.2164 Info Shutdown() called. Logger closing...
+2025-04-02 16:12:56.2164 Info Closing old configuration.
+2025-04-02 16:12:56.2164 Info Logger has been closed down.
+2025-04-02 16:14:50.0380 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-04-02 16:14:50.0437 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2025-04-02 16:14:50.0437 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2025-04-02 16:14:50.0437 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 16:14:50.0437 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:14:50.0613 Info Configuration initialized.
+2025-04-02 16:14:50.1445 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:14:50.1571 Info Shutdown() called. Logger closing...
+2025-04-02 16:14:50.1571 Info Closing old configuration.
+2025-04-02 16:14:50.1707 Info Logger has been closed down.
+2025-04-02 16:15:11.3369 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-04-02 16:15:11.3427 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2025-04-02 16:15:11.3427 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2025-04-02 16:15:11.3427 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 16:15:11.3427 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:15:11.3601 Info Configuration initialized.
+2025-04-02 16:15:11.4438 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:15:11.4655 Info Shutdown() called. Logger closing...
+2025-04-02 16:15:11.4655 Info Closing old configuration.
+2025-04-02 16:15:11.4655 Info Logger has been closed down.
+2025-04-02 16:15:37.4192 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-04-02 16:15:37.4192 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2025-04-02 16:15:37.4192 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2025-04-02 16:15:37.4192 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 16:15:37.4354 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:15:37.4354 Info Configuration initialized.
+2025-04-02 16:15:37.5283 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:15:37.5491 Info Shutdown() called. Logger closing...
+2025-04-02 16:15:37.5491 Info Closing old configuration.
+2025-04-02 16:15:37.5491 Info Logger has been closed down.
+2025-04-02 16:34:16.7491 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-04-02 16:34:16.7609 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2025-04-02 16:34:16.7609 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2025-04-02 16:34:16.7653 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 16:34:16.7823 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:34:16.7823 Info Configuration initialized.
+2025-04-02 16:34:17.1222 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:35:07.9983 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-04-02 16:35:08.0060 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2025-04-02 16:35:08.0060 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2025-04-02 16:35:08.0060 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 16:35:08.0274 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:35:08.0274 Info Configuration initialized.
+2025-04-02 16:35:08.3468 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:35:22.9192 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-04-02 16:35:22.9281 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2025-04-02 16:35:22.9281 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2025-04-02 16:35:22.9281 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 16:35:22.9514 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:35:22.9660 Info Configuration initialized.
+2025-04-02 16:37:34.2291 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-04-02 16:37:34.2371 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2025-04-02 16:37:34.2371 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2025-04-02 16:37:34.2371 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 16:37:34.2599 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:37:34.2692 Info Configuration initialized.
+2025-04-02 16:37:37.1995 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:38:05.4590 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-04-02 16:38:05.4590 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2025-04-02 16:38:05.4590 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2025-04-02 16:38:05.4679 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 16:38:05.4679 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:38:05.4816 Info Configuration initialized.
+2025-04-02 16:38:05.5651 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:38:05.5784 Info Shutdown() called. Logger closing...
+2025-04-02 16:38:05.5784 Info Closing old configuration.
+2025-04-02 16:38:05.5925 Info Logger has been closed down.
+2025-04-02 16:38:38.0959 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-04-02 16:38:38.0959 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2025-04-02 16:38:38.0959 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2025-04-02 16:38:38.0959 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 16:38:38.1135 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:38:38.1214 Info Configuration initialized.
+2025-04-02 16:38:38.2108 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:38:38.2357 Info Shutdown() called. Logger closing...
+2025-04-02 16:38:38.2357 Info Closing old configuration.
+2025-04-02 16:38:38.2357 Info Logger has been closed down.
+2025-04-02 16:38:43.3009 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-04-02 16:38:43.3009 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2025-04-02 16:38:43.3009 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2025-04-02 16:38:43.3099 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 16:38:43.3099 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:38:43.3099 Info Configuration initialized.
+2025-04-02 16:38:43.4070 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:38:43.4202 Info Shutdown() called. Logger closing...
+2025-04-02 16:38:43.4202 Info Closing old configuration.
+2025-04-02 16:38:43.4342 Info Logger has been closed down.
+2025-04-02 16:38:55.3071 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-04-02 16:38:55.3128 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2025-04-02 16:38:55.3128 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2025-04-02 16:38:55.3128 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 16:38:55.3128 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:38:55.3300 Info Configuration initialized.
+2025-04-02 16:38:55.4125 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:38:55.4252 Info Shutdown() called. Logger closing...
+2025-04-02 16:38:55.4252 Info Closing old configuration.
+2025-04-02 16:38:55.4384 Info Logger has been closed down.
+2025-04-02 16:39:02.5331 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2025-04-02 16:39:02.5434 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2025-04-02 16:39:02.5434 Info Registered target NLog.Targets.ConsoleTarget(Name=lifetimeConsole)
+2025-04-02 16:39:02.5434 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.4.0.3182. Product version: 5.4.0+4d45d445601312040107cbe2ac00e56c4bf4a60b. GlobalAssemblyCache: False
+2025-04-02 16:39:02.5790 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config
+2025-04-02 16:39:02.5944 Info Configuration initialized.
+2025-04-02 16:39:02.9602 Info Validating config: TargetNames=allfile, lifetimeConsole, ownFile-web, ConfigItems=54, FilePath=C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\bin\Debug\net9.0\nlog.config

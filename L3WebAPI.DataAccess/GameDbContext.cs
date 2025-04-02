@@ -34,11 +34,17 @@ namespace L3WebAPI.DataAccess {
 
 			priceDaoBuilder.Property(x => x.Currency);
 
+			priceDaoBuilder.HasKey(x => new { x.GameId, x.Currency });
+
 			// Foreign Key
 			//gameDaoBuilder.HasMany(x => x.Prices);
 			//gameDaoBuilder.HasMany(x => x.Prices).WithOne(x => x.Game);
-			gameDaoBuilder.OwnsMany(x => x.Prices);
+			//gameDaoBuilder.OwnsMany(x => x.Prices);
 
+			gameDaoBuilder
+				.HasMany(x => x.Prices)
+				.WithOne(x => x.Game)
+				.HasForeignKey(x => x.GameId);
 
 
 		}

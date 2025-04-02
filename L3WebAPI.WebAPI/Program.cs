@@ -1,7 +1,9 @@
 using L3WebApi.Business.Implementations;
 using L3WebApi.Business.Interfaces;
+using L3WebAPI.DataAccess;
 using L3WebAPI.DataAccess.Implementations;
 using L3WebAPI.DataAccess.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using NLog;
 using NLog.Web;
 using Swashbuckle.AspNetCore.SwaggerUI;
@@ -15,6 +17,17 @@ public class Program {
 
 		try {
 			var builder = WebApplication.CreateBuilder(args);
+
+			// Config
+			builder.Configuration
+				.AddUserSecrets<Program>(true)
+				.Build();
+
+			builder.Services.AddDbContext<GameDbContext>(opt =>
+				opt.UseNpgsql(
+					builder.Configuration.GetConnectionString("GamesDb")
+				)
+			);
 
 			// Add services to the container.
 			builder.Services.AddTransient<IGamesDataAccess, GamesDataAccess>();
@@ -47,6 +60,13 @@ public class Program {
 					Url = "/openapi/v1.json"
 				}];
 			});
+
+			using (var scope = app.Services.CreateScope()) {
+				var dbContext = scope.ServiceProvider.GetRequiredService<GameDbContext>();
+
+				// Here is the migration executed
+				dbContext.Database.Migrate();
+			}
 
 			app.Run();
 
