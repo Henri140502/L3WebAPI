@@ -55,7 +55,7 @@ namespace L3WebApi.Business.Implementations {
 					Prices = game.Prices.Select(price => new PriceDAO {
 						Currency = price.Currency,
 						Valeur = price.Valeur,
-					})
+					}).ToList(),
 				});
 			} catch (Exception ex) {
 				_logger.LogError(ex, "Erreur lors de la creation du jeu");
@@ -97,7 +97,7 @@ namespace L3WebApi.Business.Implementations {
 					Prices = game.Prices.Select(price => new PriceDAO {
 						Currency = price.Currency,
 						Valeur = price.Valeur,
-					})
+					}).ToList()
 				});
 
 				/*var dbGame = await _gameDataAccess.GetGameById(id);

@@ -1,65 +1,40 @@
-﻿using L3WebAPI.Common;
-using L3WebAPI.Common.Dao;
+﻿using L3WebAPI.Common.Dao;
 using L3WebAPI.DataAccess.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace L3WebAPI.DataAccess.Implementations {
 	public class GamesDataAccess : IGamesDataAccess {
-		private static List<GameDAO> games = [
-			new GameDAO {
-				AppId = Guid.NewGuid(),
-				Name = "Portal 2",
-				Prices = [
-					new PriceDAO {
-						Valeur = 19.99M,
-						Currency = Currency.USD,
-					}
-				]
-			},
-			new GameDAO {
-				AppId = Guid.NewGuid(),
-				Name = "Half-Life 2",
-				Prices = [
-					new PriceDAO {
-						Valeur = 14.99M,
-						Currency = Currency.EUR,
-					},
-					new PriceDAO {
-						Valeur = 15.99M,
-						Currency = Currency.USD,
-					}
-				]
-			}
-		];
+		private readonly GameDbContext _dbContext;
 
-		public async Task<IEnumerable<GameDAO>> GetAllGames() {
-			return games;
-		}
-
-		public async Task<GameDAO?> GetGameById(Guid id) {
-			return games.FirstOrDefault(x => x.AppId == id);
+		public GamesDataAccess(GameDbContext dbContext) {
+			_dbContext = dbContext;
 		}
 
 		public async Task CreateGame(GameDAO game) {
-			games.Add(game);
+			_dbContext.Games.Add(game);
+			await _dbContext.SaveChangesAsync();
 		}
 
-		public async Task<IEnumerable<GameDAO>> SearchByName(string name) {
-			return games.Where(x => x.Name.Contains(
-				name,
-				StringComparison.OrdinalIgnoreCase
-			));
+		public Task DeleteGame(Guid id) {
+			throw new NotImplementedException();
 		}
 
-		public async Task UpdateGame(GameDAO game) {
-			var gameById = await GetGameById(game.AppId);
-			if (gameById != null) {
-				games.Remove(gameById);
-			}
-			games.Add(game);
+		public async Task<IEnumerable<GameDAO>> GetAllGames() {
+			return _dbContext.Games.Include(x => x.Prices).ToList();
+			//return _dbContext.Games.Include(x => x.Prices).Include(x => x.OtherField).ToList();
+			//return _dbContext.Games.Include(x => x.Prices).ThenInclude(x => x.PriceField).ToList();
 		}
 
-		public async Task DeleteGame(Guid id) {
-			games.Remove(await GetGameById(id));
+		public Task<GameDAO?> GetGameById(Guid id) {
+			return _dbContext.Games.Include(x => x.Prices).FirstOrDefaultAsync(x => x.AppId == id);
+		}
+
+		public Task<IEnumerable<GameDAO>> SearchByName(string name) {
+			throw new NotImplementedException();
+		}
+
+		public Task UpdateGame(GameDAO game) {
+			throw new NotImplementedException();
 		}
 	}
 }
