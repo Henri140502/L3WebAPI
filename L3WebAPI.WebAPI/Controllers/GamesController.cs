@@ -23,8 +23,8 @@ namespace L3WebAPI.WebAPI.Controllers {
 		[HttpGet("{id}")]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
-		public async Task<ActionResult<GameDTO>> GetGameById(Guid id) {
-			var game = await _gamesService.GetGameById(id);
+		public async Task<ActionResult<GameDTO>> GetGameById(Guid id, CancellationToken cancellationToken = default) {
+			var game = await _gamesService.GetGameById(id, cancellationToken);
 			if (game is null) {
 				return NotFound();
 			}

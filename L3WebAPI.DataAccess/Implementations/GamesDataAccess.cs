@@ -27,8 +27,10 @@ namespace L3WebAPI.DataAccess.Implementations {
 			//return _dbContext.Games.Include(x => x.Prices).ThenInclude(x => x.PriceField).ToList();
 		}
 
-		public Task<GameDAO?> GetGameById(Guid id) {
-			return _dbContext.Games.Include(x => x.Prices).FirstOrDefaultAsync(x => x.AppId == id);
+		public Task<GameDAO?> GetGameById(Guid id, CancellationToken cancellationToken) {
+			return _dbContext.Games
+				.Include(x => x.Prices)
+				.FirstOrDefaultAsync(x => x.AppId == id, cancellationToken);
 		}
 
 		public async Task<IEnumerable<GameDAO>> SearchByName(string name) {

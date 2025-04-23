@@ -27,9 +27,9 @@ namespace L3WebApi.Business.Implementations {
 			}
 		}
 
-		public async Task<GameDTO?> GetGameById(Guid id) {
+		public async Task<GameDTO?> GetGameById(Guid id, CancellationToken cancellationToken) {
 			try {
-				var game = await _gameDataAccess.GetGameById(id);
+				var game = await _gameDataAccess.GetGameById(id, cancellationToken);
 				/*if (game is null) {
 					return null;
 				}*/
