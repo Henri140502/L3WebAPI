@@ -14,6 +14,8 @@ using System.Text;
 using System.Text.Json.Serialization;
 
 public class Program {
+	public const string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
 	private static Task WriteHealthCheckResponse(HttpContext context, HealthReport healthReport) {
 		context.Response.ContentType = "application/json; charset=utf-8";
 
@@ -80,6 +82,17 @@ public class Program {
 			});
 			builder.Services.AddOpenApi();
 
+			builder.Services.AddCors(options => {
+				options.AddPolicy(name: MyAllowSpecificOrigins,
+					policy => {
+						policy
+							.WithOrigins("http://localhost:5173")
+							//.AllowAnyOrigin()
+							.AllowAnyMethod()
+							.AllowAnyHeader();
+					});
+			});
+
 			builder.Services.AddHealthChecks()
 				.AddNpgSql(builder.Configuration.GetConnectionString("GamesDb"));
 
@@ -94,6 +107,8 @@ public class Program {
 			}
 
 			app.UseHttpsRedirection();
+
+			app.UseCors(MyAllowSpecificOrigins);
 
 			app.UseAuthorization();
 
