@@ -15,8 +15,10 @@ namespace L3WebAPI.DataAccess.Implementations {
 			await _dbContext.SaveChangesAsync();
 		}
 
-		public Task DeleteGame(Guid id) {
-			throw new NotImplementedException();
+		public async Task DeleteGame(Guid id) {
+			var oldGame = await GetGameById(id);
+			_dbContext.Games.Remove(oldGame);
+			await _dbContext.SaveChangesAsync();
 		}
 
 		public async Task<IEnumerable<GameDAO>> GetAllGames() {
@@ -29,12 +31,22 @@ namespace L3WebAPI.DataAccess.Implementations {
 			return _dbContext.Games.Include(x => x.Prices).FirstOrDefaultAsync(x => x.AppId == id);
 		}
 
-		public Task<IEnumerable<GameDAO>> SearchByName(string name) {
-			throw new NotImplementedException();
+		public async Task<IEnumerable<GameDAO>> SearchByName(string name) {
+			return _dbContext.Games
+				.Include(x => x.Prices)
+				.Where(game => game.Name.ToLower().Contains(name.ToLower()));
+			//.Where(game => game.Name.Contains(name, StringComparison.OrdinalIgnoreCase));
 		}
 
-		public Task UpdateGame(GameDAO game) {
-			throw new NotImplementedException();
+		public async Task UpdateGame(GameDAO game) {
+			// Ici on fait du change tracking
+			// vous pouvez getbyid dans le business, le modifier, puis faire juste savechangeasync();
+
+			var oldGame = await GetGameById(game.AppId);
+			oldGame.Name = game.Name;
+			oldGame.Prices = game.Prices;
+
+			await _dbContext.SaveChangesAsync();
 		}
 	}
 }
