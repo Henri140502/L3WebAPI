@@ -3,13 +3,55 @@ using L3WebApi.Business.Interfaces;
 using L3WebAPI.DataAccess;
 using L3WebAPI.DataAccess.Implementations;
 using L3WebAPI.DataAccess.Interfaces;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using NLog;
 using NLog.Web;
 using Swashbuckle.AspNetCore.SwaggerUI;
+using System.Text.Json;
+using System.Text;
 using System.Text.Json.Serialization;
 
 public class Program {
+	private static Task WriteHealthCheckResponse(HttpContext context, HealthReport healthReport) {
+		context.Response.ContentType = "application/json; charset=utf-8";
+
+		var options = new JsonWriterOptions { Indented = true };
+
+		using var memoryStream = new MemoryStream();
+		using (var jsonWriter = new Utf8JsonWriter(memoryStream, options)) {
+			jsonWriter.WriteStartObject();
+			jsonWriter.WriteString("status", healthReport.Status.ToString());
+			jsonWriter.WriteStartObject("results");
+
+			foreach (var healthReportEntry in healthReport.Entries) {
+				jsonWriter.WriteStartObject(healthReportEntry.Key);
+				jsonWriter.WriteString("status",
+					healthReportEntry.Value.Status.ToString());
+				jsonWriter.WriteString("description",
+					healthReportEntry.Value.Description);
+				jsonWriter.WriteStartObject("data");
+
+				foreach (var item in healthReportEntry.Value.Data) {
+					jsonWriter.WritePropertyName(item.Key);
+
+					JsonSerializer.Serialize(jsonWriter, item.Value,
+						item.Value?.GetType() ?? typeof(object));
+				}
+
+				jsonWriter.WriteEndObject();
+				jsonWriter.WriteEndObject();
+			}
+
+			jsonWriter.WriteEndObject();
+			jsonWriter.WriteEndObject();
+		}
+
+		return context.Response.WriteAsync(
+			Encoding.UTF8.GetString(memoryStream.ToArray()));
+	}
+
 
 	public static void Main(string[] args) {
 		var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
@@ -38,6 +80,9 @@ public class Program {
 			});
 			builder.Services.AddOpenApi();
 
+			builder.Services.AddHealthChecks()
+				.AddNpgSql(builder.Configuration.GetConnectionString("GamesDb"));
+
 			builder.Logging.ClearProviders();
 			builder.Host.UseNLog();
 
@@ -51,6 +96,10 @@ public class Program {
 			app.UseHttpsRedirection();
 
 			app.UseAuthorization();
+
+			app.MapHealthChecks("/health", new HealthCheckOptions {
+				ResponseWriter = WriteHealthCheckResponse
+			});
 
 			app.MapControllers();
 

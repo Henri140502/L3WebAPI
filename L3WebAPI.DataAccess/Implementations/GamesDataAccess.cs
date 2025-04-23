@@ -16,7 +16,7 @@ namespace L3WebAPI.DataAccess.Implementations {
 		}
 
 		public async Task DeleteGame(Guid id) {
-			var oldGame = await GetGameById(id);
+			var oldGame = await GetGameById(id, CancellationToken.None);
 			_dbContext.Games.Remove(oldGame);
 			await _dbContext.SaveChangesAsync();
 		}
@@ -44,7 +44,7 @@ namespace L3WebAPI.DataAccess.Implementations {
 			// Ici on fait du change tracking
 			// vous pouvez getbyid dans le business, le modifier, puis faire juste savechangeasync();
 
-			var oldGame = await GetGameById(game.AppId);
+			var oldGame = await GetGameById(game.AppId, CancellationToken.None);
 			oldGame.Name = game.Name;
 			oldGame.Prices = game.Prices;
 

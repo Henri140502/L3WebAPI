@@ -1,31 +1,32 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>b98807f0-cb79-4982-bb69-92ac38270f4f</UserSecretsId>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>b98807f0-cb79-4982-bb69-92ac38270f4f</UserSecretsId>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.3">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="NLog" Version="5.4.0" />
-    <PackageReference Include="NLog.Web.AspNetCore" Version="5.4.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.3.2" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="AspNetCore.HealthChecks.NpgSql" Version="9.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.3">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="NLog" Version="5.4.0" />
+		<PackageReference Include="NLog.Web.AspNetCore" Version="5.4.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="7.3.2" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\L3WebApi.Business\L3WebApi.Business.csproj" />
-    <ProjectReference Include="..\L3WebAPI.Common\L3WebAPI.Common.csproj" />
-    <ProjectReference Include="..\L3WebAPI.DataAccess\L3WebAPI.DataAccess.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\L3WebApi.Business\L3WebApi.Business.csproj" />
+		<ProjectReference Include="..\L3WebAPI.Common\L3WebAPI.Common.csproj" />
+		<ProjectReference Include="..\L3WebAPI.DataAccess\L3WebAPI.DataAccess.csproj" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <EditorConfigFiles Remove="C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\.editorconfig" />
-  </ItemGroup>
+	<ItemGroup>
+		<EditorConfigFiles Remove="C:\Users\elani\source\repos\L3WebAPI\L3WebAPI.WebAPI\.editorconfig" />
+	</ItemGroup>
 
 </Project>
